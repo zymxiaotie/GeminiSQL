@@ -42,11 +42,12 @@ prompt="""
     Region,product_ID,category,sub_category,product_name,sales,\n
     quantity,discount,profit \n\nFor example, \nExample 1 - How many
     entries of the records are present?, the SQL command will be 
-    something like this SELECT COUNT(*) FROM SampleSuperStore; 
+    something like this SELECT count(*) FROM SampleSuperStore; 
     \nExample 2 - Show me all the orders delivered in June 2016?,
     the SQL command will be something like this SELECT * FROM 
-    SampleSuperStore WHERE year(ship_date)=2016 and 
-    month(ship_date)=06; additionally, the sql code should not have
+    SampleSuperStore WHERE ship_date between date('2016-06-01') and 
+    date('2016-06-30'); you should keep all letters lowercase when 
+    making function calls. additionally, the sql code should not have
     ''' in the beginning or end and sql word in output
     
     """
